@@ -21,12 +21,14 @@ int main()
                      ar[i][j]=0.0;
               }
        }
-       ar[1][1]=-9.0;
-       ar[0][2]=9.0;
-       prev[1][1]=-9.0;
-       prev[0][2]=9.0;
+       float team_val;
+       team_val = 8.0;
+       ar[1][1]=-team_val;
+       ar[0][2]=team_val;
+       prev[1][1]=-team_val;
+       prev[0][2]=team_val;
        float delta,maxdif=100.0;
-       delta=(float)9/20;	
+       delta=team_val*(1.0/20);	
        for(i=0;i<3;i++)
        {
               for(j=0;j<4;j++)
@@ -46,7 +48,7 @@ int main()
                             else
                             {
                                    float val;
-                                   float valeast,valwest,valnorth,valsouth,unitcost=-9.0/20.0;
+                                   float valeast,valwest,valnorth,valsouth,unitcost=-team_val/20.0;
                                    int x[4][2];
                                    x[0][0]=i-1;
                                    x[0][1]=j;
