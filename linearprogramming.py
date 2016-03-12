@@ -1,15 +1,3 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# vim:fenc=utf-8
-#
-# Copyright © 2016 vishalapr <vishalapr@vishalapr-Lenovo-G50-70>
-#
-# Distributed under terms of the MIT license.
-
-"""
-
-"""
-
 maps = [[2,2,2,2,2,2],[2,0,0,1,0,2],[2,0,-1,2,0,2],[2,0,0,0,0,2],[2,2,2,2,2,2]]
 
 probdir = 0.8
@@ -33,7 +21,7 @@ for j in range(1,13):
                 continue
             if maps[cur_row][cur_col]!=0:
                 if dirs==5: #Noop action which leads to nowhere, probability is 1
-                    print 0, #What should I do here ans-1 or 0?
+                    print ans, #What should I do here ans-1 or 0?
                 continue
             if dirs==1:
                 cur_row = old_row
