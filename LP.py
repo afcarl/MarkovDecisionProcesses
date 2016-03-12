@@ -29,10 +29,12 @@ for j in range(1,13):
             cur_col = old_col
             if cur_row == j_row and cur_col == j_col:
                 ans = 1
+            if maps[cur_row][cur_col]==2:
+                continue
             if maps[cur_row][cur_col]!=0:
                 if dirs==5: #Noop action which leads to nowhere, probability is 1
                     print 0, #What should I do here ans-1 or 0?
-                continue;
+                continue
             if dirs==1:
                 cur_row = old_row
                 cur_col = old_col
